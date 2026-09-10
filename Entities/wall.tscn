@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxqp2rn1dfrpw"]
+
+[ext_resource type="Script" path="res://Entities/wall.gd" id="1_wdu3j"]
+[ext_resource type="Texture2D" uid="uid://d0haasxkkcfqu" path="res://icon.svg" id="1_xpjhm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g0gx"]
+
+[node name="Node2D" type="StaticBody2D"]
+script = ExtResource("1_wdu3j")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(5, 0.5)
+texture = ExtResource("1_xpjhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(32, 3.5)
+shape = SubResource("RectangleShape2D_7g0gx")
